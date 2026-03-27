@@ -20,7 +20,7 @@ const Mpesapayment = () => {
       formdata.append("phone",phone)
       formdata.append("amount", singleproduct.product_cost)
       try {
-        const response=await axios.post("http://hermatonhiggs.alwaysdata.net/api/mpesa_payment",formdata)
+        const response=await axios.post("https://hermatonhiggs.alwaysdata.net/api/mpesa_payment",formdata)
             setSuccss(response.data.message)
             setLoading("")
       } catch (error) {

@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import React,{useState ,useEffect} from "react"
 import Corousel from "./Corousel"
+import Footer from "./Footer"
 const Getproduct =()=>{
     let navigate = useNavigate();
     // declare our states here 
@@ -12,7 +13,7 @@ const Getproduct =()=>{
     const getproducts=async ()=>{
         setLoading("Please wait...")
         try {
-            const response =await axios.get("http://hermatonhiggs.alwaysdata.net/api/getproducts")
+            const response =await axios.get("https://hermatonhiggs.alwaysdata.net/api/getproducts")
             setProducts(response.data)
             setLoading("")
         } catch (error) {
@@ -27,7 +28,7 @@ const Getproduct =()=>{
     console.log(products)
     
 
-    const imagepath="http://hermatonhiggs.alwaysdata.net/static/images/"
+    const imagepath="https://hermatonhiggs.alwaysdata.net/static/images/"
         
     return(
         <div className="row">
@@ -54,6 +55,7 @@ const Getproduct =()=>{
             
             </div>
         ))}
+        <Footer/>
         </div>
     )
 }

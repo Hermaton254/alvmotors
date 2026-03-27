@@ -6,7 +6,7 @@ const navbar = () => {
             <div class="col-md-12 bg-primary">
                 {/* <!-- a nav with navbar content  --> */}
                 <nav class="navbar navbar-expand-md bg-info">
-                    <a href="" class="navbar-brand text-danger">ALV Motors</a>
+                    <a href="/" class="navbar-brand text-danger">ALV Motors</a>
                     <button class="navbar-toggler" data-bs-target="#navbarcollapse" data-bs-toggle="collapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
